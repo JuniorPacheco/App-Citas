@@ -9,7 +9,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
     }
 
   return (
-    <div className="bg-slate-700 rounded-xl p-8 lg:mt-0 md:my-10">
+    <div className="bg-slate-700 rounded-xl p-8 lg:mt-0 md:my-10 mb-10">
 
         <p className="uppercase font-bold case mb-4">
         Nombre: {' '}
