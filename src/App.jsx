@@ -4,16 +4,8 @@ import Header from './components/Header.jsx';
 import ListadoPacientes from './components/ListadoPacientes.jsx';
 
 function App() {
-  const [pacientes, setPacientes] = useState([]);
+  const [pacientes, setPacientes] = useState(JSON.parse(localStorage.getItem('pacientes')) ?? []);
   const [paciente, setPaciente] = useState({});
-
-  useEffect(() => {
-    const obtenerLS = () => {
-      const pacientesAlmacenados = JSON.parse(localStorage.getItem('pacientes')) ?? [];
-      setPacientes(pacientesAlmacenados); 
-    }
-    obtenerLS();
-  }, [])
 
   useEffect(() => {
     localStorage.setItem('pacientes', JSON.stringify(pacientes));
